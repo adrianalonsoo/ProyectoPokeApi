@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import  {FirebaseConf} from './firebase';
+import  {Firebase} from './firebase';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import logo from "./assets/poke.png";
@@ -13,7 +13,7 @@ const Navegacion = () => {
   const [isLogged, setIsLogged] = React.useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(FirebaseConf.auth, (user) => {
+    const unsubscribe = onAuthStateChanged(Firebase.auth, (user) => {
       if (user) {
         setIsLogged(true);
       } else {
@@ -26,7 +26,7 @@ const Navegacion = () => {
   },[])
 
   const handleLogout = () => {
-    FirebaseConf.auth.signOut() 
+    Firebase.auth.signOut() 
       .then(() => {
         
         console.log('Se ha cerrado sesion');
