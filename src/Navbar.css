@@ -1,0 +1,20 @@
+nav {
+    background-color: #d5c12b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .25rem 0;
+    box-shadow: 4px 4px 8px #00000020;
+  }
+  
+  
+  
+  
+ 
+
+  
+  img{
+    width: 20rem;
+    display: flex;
+    justify-content: flex-start;
+  }
